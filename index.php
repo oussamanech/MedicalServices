@@ -1,5 +1,6 @@
 <?php
 require_once('config.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,7 +58,8 @@ require_once('config.php');
 <div class="container">
 <div class="row">
 <div class="col-sm-6 offset-sm-3 border p-3 mt-3">
-        <h1 class="alert alert-info text-center" role="alert">Medical-Services  </h1>
+        <h1 class="alert alert-info text-center" role="alert">Medical-Services   </h1>
+        <h1 class="alert alert-info text-center" role="alert">Add Page admin & connect to database   </h1>
 </div>
 </div>
 </div>
