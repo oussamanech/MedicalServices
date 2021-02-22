@@ -26,7 +26,7 @@ function getRow($table,$field,$value)
 {
     global $conn;
     //$sql = "SELECT * FROM `$table` WHERE `$field`=$value ;";
-    $ok="alex@gmail.com";
+    //$ok="alex@gmail.com";
     // SELECT * FROM `users` WHERE `user_email` = `alex@gmail.com`;
     $sql="SELECT * FROM `$table` WHERE `$field`= '". $value ."' ; " ;
     $result = mysqli_query($conn,$sql);
@@ -39,6 +39,26 @@ function getRow($table,$field,$value)
         }
     }
     return false;
+}
+
+function getRows($table)
+{
+    global $conn;
+    
+    $sql="SELECT * FROM `$table` ; " ;
+    $result = mysqli_query($conn,$sql);
+    if($result){
+        $rows = [];
+        if(mysqli_num_rows($result)>0)
+        {
+            while($row = mysqli_fetch_assoc($result))
+            {
+                $rows[] = $row;
+            }
+            
+        }
+    }
+    return $rows;
 }
 
 
