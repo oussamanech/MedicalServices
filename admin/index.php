@@ -3,6 +3,7 @@
 
     require_once BLA.'inc/header.php';
 
+    echo $_SESSION['user_name'];
 
 ?>
 

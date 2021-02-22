@@ -1,3 +1,10 @@
+<?php 
+    if(!isset($_SESSION['user_name']))
+    {
+        header("location:".BURLA.'login.php');
+    }
+?>
+  
 <!DOCTYPE html>
 <html lang="en">
 <head>
