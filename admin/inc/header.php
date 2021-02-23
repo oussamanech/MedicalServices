@@ -2,6 +2,7 @@
     if(!isset($_SESSION['user_name']))
     {
         header("location:".BURLA.'login.php');
+
     }
 ?>
   
@@ -76,7 +77,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link"  href="<?php echo BURLA.'logout.php'; ?>">Logout</a>
+                    <a class="nav-link" href="<?php echo BURLA.'logout.php'; ?>">Logout</a>
                 </li>
 
             </ul>

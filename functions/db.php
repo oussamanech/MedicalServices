@@ -61,5 +61,15 @@ function getRows($table)
     return $rows;
 }
 
+function db_update($sql)
+{
+    global $conn;
+    $result = mysqli_query($conn,$sql);
+    if($result)
+    {
+        return "Updated Success";
+    }
+    return false;
+}
 
 ?>
