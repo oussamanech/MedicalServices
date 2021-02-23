@@ -71,5 +71,15 @@ function db_update($sql)
     }
     return false;
 }
-
+// delete record 
+function deleteRow($sql)
+{
+    global $conn;
+    $result = mysqli_query($conn,$sql);
+    if($result)
+    {
+        return "Deleted Success";
+    }
+    return false;
+}
 ?>

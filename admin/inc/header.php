@@ -1,4 +1,5 @@
 <?php 
+ob_start();
     if(!isset($_SESSION['user_name']))
     {
         header("location:".BURLA.'login.php');
@@ -21,15 +22,18 @@
 <body>
 
    <!-- Navbar --> 
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="<?php echo BURLA ?>"> <img src="<?php echo BURL.'assets/images/logo.png'; ?>" width="70" alt="LOGO"> </a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="<?php echo BURL ?>"> <img src="<?php echo BURL.'assets/images/logo.png'; ?>" width="70" alt="LOGO"> </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="<?php echo BURLA ?>">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="<?php echo BURL ?>">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="<?php echo BURLA; ?>">Dashboard</a>
                 </li>
 
                 <li class="nav-item dropdown">
@@ -72,9 +76,7 @@
                 </li>
 
 
-                <li class="nav-item ">
-                    <a class="nav-link" href="<?php echo BURL; ?>" target="_blank">View Site</a>
-                </li>
+               
 
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo BURLA.'logout.php'; ?>">Logout</a>
